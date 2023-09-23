@@ -1,0 +1,271 @@
+// Variables
+$Strongcyan: hsl(172, 67%, 45%);
+$Verydarkcyan: hsl(183, 100%, 15%);
+$Darkgrayishcyan: hsl(186, 14%, 43%);
+$Grayishcyan: hsl(184, 14%, 56%);
+$Lightgrayishcyan: hsl(185, 41%, 84%);
+$Verylightgrayishcyan: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: $Lightgrayishcyan;
+    .container {
+        width: 60%;
+        margin: 80px 0;
+        .logo {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .bill {
+            display: flex;
+            background-color: $White;
+            padding: 25px;
+            gap: 30px;
+            border-radius: 20px;
+            .left {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin: 15px 0;
+                .form {
+                    .for-bill {
+                        display: flex;
+                        justify-content: space-between;
+                        label {
+                            color: $Verydarkcyan;
+                            font-size: 15px;
+                        }
+                        .error {
+                            color: red;
+                            font-size: 12px;
+                            display: none;
+                        }
+                    }
+                    
+                    .for-input {
+                        position: relative;
+                        input {
+                            padding: 4px;
+                            width: 100%;
+                            border-color: transparent;
+                            outline: none;
+                            transition: 0.3s;
+                            background-color: $Verylightgrayishcyan;
+                            margin-top: 4px;
+                            border-radius: 5px;
+                            font-size: 24px;
+                            caret-color: $Strongcyan;
+                            text-align: right;
+                            color: $Verydarkcyan;
+                            font-weight: 700;
+                            font-family: 'Space Mono', monospace;
+                            &:hover {
+                                border: 2px solid $Strongcyan;
+                            }
+                        }
+                        img {
+                            position: absolute;
+                            left: 12px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+                .tips {
+                    p {
+                        color: $Verydarkcyan;
+                    }
+                    .for-tips {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 5px;
+                        margin-top: 10px;
+                        .tip {
+                            background-color: $Verydarkcyan;
+                            color: white;
+                            transition: 0.3s;
+                            cursor: pointer;
+                            &:hover {
+                                background-color: $Strongcyan;
+                                color: $Verydarkcyan;
+                            }
+                        }
+                        .tip, input {
+                            width: calc((100% / 3) - 5px);
+                            padding: 6px 0;
+                            border-radius: 5px;
+                            font-size: 20px;
+                            text-align: center;
+                        }
+                        input {
+                            border-color: transparent;
+                            background-color: $Verylightgrayishcyan;
+                            padding: 7px 0;
+                            color: $Verydarkcyan;
+                            font-weight: 700;
+                            font-family: 'Space Mono', monospace;
+                            outline: none;
+                            transition: 0.3s;
+                            &:focus {
+                                border: 1px solid $Strongcyan;
+                            }
+                        }
+                    }
+                }
+                .people {
+                    .for-people {
+                        display: flex;
+                        justify-content: space-between;
+                        p {
+                            color: $Verydarkcyan;
+                            font-size: 15px;
+                        }
+                        .error {
+                            color: red;
+                            display: none;
+                        }
+                    }
+                    .input {
+                        position: relative;
+                        input {
+                            padding: 4px;
+                            width: 100%;
+                            border-color: transparent;
+                            outline: none;
+                            transition: 0.3s;
+                            background-color: $Verylightgrayishcyan;
+                            margin-top: 4px;
+                            border-radius: 5px;
+                            font-size: 24px;
+                            caret-color: $Strongcyan;
+                            text-align: right;
+                            color: $Verydarkcyan;
+                            font-weight: 700;
+                            font-family: 'Space Mono', monospace;
+                            &:hover {
+                                border: 2px solid $Strongcyan;
+                            }
+                        }
+                        img {
+                            position: absolute;
+                            left: 12px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+
+            }
+            .right {
+                flex: 1;
+                background-color: $Verydarkcyan;
+                border-radius: inherit;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                > div {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .text {
+                        p:nth-child(1) {
+                            color: $White;
+                        }
+                        p:nth-child(2) {
+                            color: $Grayishcyan;
+                            font-size: smaller;
+                        }
+                    }
+                    .tip-number {
+                        font-size: 50px;
+                        font-weight: 700;
+                        color: $Strongcyan;
+                    }
+                }
+                > div:nth-child(1) {
+                    margin-bottom: 15px;
+                }
+                > div:nth-child(2) {
+                    margin-bottom: auto;
+                }
+                button {
+                    margin-top: 100px;
+                    padding: 12px;
+                    border-radius: 5px;
+                    border: none;
+                    background-color: $Strongcyan;
+                    font-size: 18px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: $Verydarkcyan;
+                    transition: 0.3s;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: $Lightgrayishcyan;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.active {
+    background-color: $Strongcyan !important;
+    color: $Verydarkcyan !important;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        width: 80% !important;
+    }
+}
+@media (max-width: 800px) {
+    .container {
+        width: 100% !important;
+        .bill {
+            flex-direction: column;
+            .right {
+                > div {
+                    .text {
+                        p:nth-child(1) {
+                            font-size: 15px !important;
+                        }
+                        p:nth-child(2) {
+                            font-size: 13px !important;
+                        }
+                    }
+                    .tip-number {
+                        font-size: 32px !important;
+                    }
+                }
+                button {
+                    margin-top: 30px !important;
+                }
+            }
+            .left {
+                .form {
+                    margin-bottom: 20px !important;
+                }
+                .tips {
+                    margin-bottom: 20px !important;
+                }
+            }
+        }
+    }
+}

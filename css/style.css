@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: hsl(185, 41%, 84%);
+}
+body .container {
+  width: 60%;
+  margin: 80px 0;
+}
+body .container .logo {
+  text-align: center;
+  margin-bottom: 50px;
+}
+body .container .bill {
+  display: flex;
+  background-color: hsl(0, 0%, 100%);
+  padding: 25px;
+  gap: 30px;
+  border-radius: 20px;
+}
+body .container .bill .left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+body .container .bill .left .form .for-bill {
+  display: flex;
+  justify-content: space-between;
+}
+body .container .bill .left .form .for-bill label {
+  color: hsl(183, 100%, 15%);
+  font-size: 15px;
+}
+body .container .bill .left .form .for-bill .error {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+body .container .bill .left .form .for-input {
+  position: relative;
+}
+body .container .bill .left .form .for-input input {
+  padding: 4px;
+  width: 100%;
+  border-color: transparent;
+  outline: none;
+  transition: 0.3s;
+  background-color: hsl(189, 41%, 97%);
+  margin-top: 4px;
+  border-radius: 5px;
+  font-size: 24px;
+  caret-color: hsl(172, 67%, 45%);
+  text-align: right;
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  font-family: "Space Mono", monospace;
+}
+body .container .bill .left .form .for-input input:hover {
+  border: 2px solid hsl(172, 67%, 45%);
+}
+body .container .bill .left .form .for-input img {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body .container .bill .left .tips p {
+  color: hsl(183, 100%, 15%);
+}
+body .container .bill .left .tips .for-tips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+body .container .bill .left .tips .for-tips .tip {
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+body .container .bill .left .tips .for-tips .tip:hover {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+body .container .bill .left .tips .for-tips .tip, body .container .bill .left .tips .for-tips input {
+  width: calc(33.3333333333% - 5px);
+  padding: 6px 0;
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+body .container .bill .left .tips .for-tips input {
+  border-color: transparent;
+  background-color: hsl(189, 41%, 97%);
+  padding: 7px 0;
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  font-family: "Space Mono", monospace;
+  outline: none;
+  transition: 0.3s;
+}
+body .container .bill .left .tips .for-tips input:focus {
+  border: 1px solid hsl(172, 67%, 45%);
+}
+body .container .bill .left .people .for-people {
+  display: flex;
+  justify-content: space-between;
+}
+body .container .bill .left .people .for-people p {
+  color: hsl(183, 100%, 15%);
+  font-size: 15px;
+}
+body .container .bill .left .people .for-people .error {
+  color: red;
+  display: none;
+}
+body .container .bill .left .people .input {
+  position: relative;
+}
+body .container .bill .left .people .input input {
+  padding: 4px;
+  width: 100%;
+  border-color: transparent;
+  outline: none;
+  transition: 0.3s;
+  background-color: hsl(189, 41%, 97%);
+  margin-top: 4px;
+  border-radius: 5px;
+  font-size: 24px;
+  caret-color: hsl(172, 67%, 45%);
+  text-align: right;
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  font-family: "Space Mono", monospace;
+}
+body .container .bill .left .people .input input:hover {
+  border: 2px solid hsl(172, 67%, 45%);
+}
+body .container .bill .left .people .input img {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body .container .bill .right {
+  flex: 1;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: inherit;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .container .bill .right > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .container .bill .right > div .text p:nth-child(1) {
+  color: hsl(0, 0%, 100%);
+}
+body .container .bill .right > div .text p:nth-child(2) {
+  color: hsl(184, 14%, 56%);
+  font-size: smaller;
+}
+body .container .bill .right > div .tip-number {
+  font-size: 50px;
+  font-weight: 700;
+  color: hsl(172, 67%, 45%);
+}
+body .container .bill .right > div:nth-child(1) {
+  margin-bottom: 15px;
+}
+body .container .bill .right > div:nth-child(2) {
+  margin-bottom: auto;
+}
+body .container .bill .right button {
+  margin-top: 100px;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: hsl(172, 67%, 45%);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: hsl(183, 100%, 15%);
+  transition: 0.3s;
+  cursor: pointer;
+}
+body .container .bill .right button:hover {
+  background-color: hsl(185, 41%, 84%);
+}
+
+.active {
+  background-color: hsl(172, 67%, 45%) !important;
+  color: hsl(183, 100%, 15%) !important;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 80% !important;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    width: 100% !important;
+  }
+  .container .bill {
+    flex-direction: column;
+  }
+  .container .bill .right > div .text p:nth-child(1) {
+    font-size: 15px !important;
+  }
+  .container .bill .right > div .text p:nth-child(2) {
+    font-size: 13px !important;
+  }
+  .container .bill .right > div .tip-number {
+    font-size: 32px !important;
+  }
+  .container .bill .right button {
+    margin-top: 30px !important;
+  }
+  .container .bill .left .form {
+    margin-bottom: 20px !important;
+  }
+  .container .bill .left .tips {
+    margin-bottom: 20px !important;
+  }
+}/*# sourceMappingURL=style.css.map */
